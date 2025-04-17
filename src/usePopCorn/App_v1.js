@@ -22,8 +22,12 @@ export default function App_v1() {
       try {
         setIsLoading(true);
         setError("");
+        // const res = await fetch(
+        //   `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+        //   { signal: controller.signal }
+        // );
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+          `https://www.omdbapi.com/?apikey=c6d6758&s=${query}`,
           { signal: controller.signal }
         );
         if (!res.ok) throw new Error("faild to fetch data");
